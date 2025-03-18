@@ -5,36 +5,45 @@ body {
     color: white;
     font-family: 'Jersey 10', sans-serif;
 
+    /* Bumping up the fontsize nice and big */
     font-size: 44px;
 }
 
 /* Background */
 
 .background_wrapper {
+    /* Setting the z-index of the background to be negative so it doesn't show on top of the content */
     z-index: -100;
 }
 
 .bg {
+    /* Setting the z-index as above */
     z-index: -100;
+
+    /* Background elements will span the full width and height of the page */
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 
+    /* To create a zoomed-in effect, we can set the background size to be quite large. */
     background-size: 400vh;
 
+    /* Apply an animation */
     animation: bg_scroll 15s linear infinite;
 }
 
 @keyframes bg_scroll {
     from {
+        /* This scrolls from 100vh to 0 on the x-axis */
+        /* A to keyframe isn't needed here, the animation will animate back to the default values. */
         background-position: 100vh 0;
     }
 }
 
 .bg-1 {
-    background-image: url('../images/starscape-1.png');
+    background-image: url('/images/starscape-1.png');
     animation-duration: 25s;
 }
 .bg-2 {
