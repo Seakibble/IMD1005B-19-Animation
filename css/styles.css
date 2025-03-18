@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Jersey 10', sans-serif;
+
+    font-size: 44px;
+}
+
+/* Background */
+
+.background_wrapper {
+    z-index: -100;
+}
+
+.bg {
+    z-index: -100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-size: 400vh;
+
+    animation: bg_scroll 15s linear infinite;
+}
+
+@keyframes bg_scroll {
+    from {
+        background-position: 100vh 0;
+    }
+}
+
+.bg-1 {
+    background-image: url('../images/starscape-1.png');
+    animation-duration: 25s;
+}
+.bg-2 {
+    background-image: url('../images/starscape-2.png');
+    animation-duration: 40s;
+}
+.bg-3 {
+    background-image: url('../images/starscape-3.png');
+    animation-duration: 50s;
+}
+.bg-4 {
+    background-image: url('../images/starscape-4.png');
+    animation-duration: 75s;
+}
+
+.bg-filter {
+    background: radial-gradient(#0122, #0265);
+    animation: none
+}
+
+/* Titles */
+
+.titleScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titleScreen_text {
+    background-color: #000c;
+    border: 2px solid rgb(100,100,255,0.2);
+}
+
+h1, h2 {
+    font-weight: 400;
+    text-align: center;
+
+    transform: skew(-10deg);
+}
+
+h2 {
+    font-size: 0.8em;
+}
+
+.separator {
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 0, 0.5), 
+        rgb(255, 128, 0) 47%, 
+        white 49%,
+        white 51%,
+        rgb(255, 128, 0) 53%,
+        rgba(255, 0, 0, 0.5) 100%
+    );
+    
+    background-size: 200% 100%;
+
+    height: 3px;
+    width: 320px;
+    margin: -10px auto 30px;
+
+    animation: slide 10s ease-in-out infinite alternate;
+}
+
+@keyframes slide {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: 100%;
+    }
+}
