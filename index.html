@@ -23,18 +23,22 @@
 
     <!-- The content in the foreground will be in this titleScreen div -->
     <div class="titleScreen">
+        <!-- The headings will be in this div so that we can style animate the box they're in  -->
         <div class="titleScreen_text">
+            <!-- To animate the individual letters in the h1, they need to be separate elements -->
+            <!-- Make sure you leave no whitespace between the letters if they're in a word. -->
             <h1>
                 <span>T</span><span>H</span><span>E</span>
-
                 <span>O</span><span>T</span><span>H</span><span>E</span><span>R</span>
-
                 <span>S</span><span>I</span><span>D</span><span>E</span>
             </h1>
             <h2>An Interstellar Adventure</h2>
+            <!-- This little div will allow us to style a line we can animate -->
             <div class="separator"></div>
         </div>
+        <!-- To keep things organized and lined up, the controls will be in a grid. -->
         <div class="controls">
+            <!-- To colour the text, we'll use <i> tags. -->
             <span>Arrows / <i>[WASD]</i></span>
             <span>Move</span>
             <span>Hold <i>[X]</i></span>
